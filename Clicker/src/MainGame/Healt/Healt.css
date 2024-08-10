@@ -1,0 +1,20 @@
+#healt-field p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 2em;
+}
+#healt-field{
+    background-color: rgba(0, 0, 0, 0.277);
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 30px;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#healt-belt{
+    width: 50%;
+}
