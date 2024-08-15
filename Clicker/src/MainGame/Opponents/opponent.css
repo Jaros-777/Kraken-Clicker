@@ -42,17 +42,11 @@
 #opponent:active{
   animation-name: opponent-animation-attack;
   animation-duration: 0.5s;
-  /* transform: translate(-70%, -50%); */
   transition: transform 0.1s ease-in-out;
   animation-iteration-count: 1;
   cursor: url("/Pages/Clicker/src/Pictures/sword-cursor-attack.png"), auto;
 }
 
-/* #healt-field p {
-  margin: 0px;
-  padding: 0px;
-  font-size: 2em;
-} */
 #healt-field {
   background-color: rgba(0, 0, 0, 0.277);
   border: 2px solid black;
