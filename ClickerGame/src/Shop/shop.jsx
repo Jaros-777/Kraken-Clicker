@@ -2,13 +2,12 @@ import "./Shop.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import upgrade from "../Pictures/upgrade-logo.png";
-import iconList from "./icon-list.png"
+import iconList from "./icon-list.png";
 
 function shop(props) {
   const [earthClickerPrice, setEarthClickerPrice] = useState(10);
   const [campFirePrice, setCampFirePrice] = useState(10);
   const [attackPrice, setAttackPrice] = useState(10);
-  
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -31,25 +30,36 @@ function shop(props) {
     if (props.money >= campFirePrice) {
       setCampFirePrice(campFirePrice * 3);
       props.setMoney(props.money - campFirePrice);
-      if(props.moneyPerSecond == 0)
-        {
-
-          props.setMoneyPerSecond(props.moneyPerSecond + 1);
-        }else props.setMoneyPerSecond(props.moneyPerSecond *2);
+      if (props.moneyPerSecond == 0) {
+        props.setMoneyPerSecond(props.moneyPerSecond + 1);
+      } else props.setMoneyPerSecond(props.moneyPerSecond * 2);
       props.setForceUpdate?.();
     }
   }
 
   function UpgradeAttackPrice() {
     if (props.money >= attackPrice) {
-        props.setAttackDamage(props.attackDamage * 2)
-        props.setMoney(props.money - attackPrice);
-        setAttackPrice(attackPrice * 2)
+      props.setAttackDamage(props.attackDamage * 2);
+      props.setMoney(props.money - attackPrice);
+      setAttackPrice(attackPrice * 2);
     }
   }
 
+  function showShop(){
+    var shop = document.getElementById("shop");
+    if (shop.style.display === "none" || shop.style.display === "") {
+      shop.style.display = "block";
+    } else {
+      shop.style.display = "none";
+    }
+  }
+  
+
   return (
     <>
+      <div onClick={showShop} id="shop-drop-menu">
+        <img src={iconList} alt="icon-list" />
+      </div>
       <div id="shop">
         <p style={{ fontSize: "6vh" }}>SHOP</p>
         <ul>
@@ -85,9 +95,6 @@ function shop(props) {
             </div>
           </li>
         </ul>
-      </div>
-      <div id="shop-drop-menu">
-        <img src={iconList} alt="icon-list" />
       </div>
     </>
   );

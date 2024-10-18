@@ -63,14 +63,14 @@
   display: none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 900px){
   #shop{
     display: none;
     position: absolute;
-    top: 20vh;
+    top: 15vh;
     left: 2vw;
     width: 90%;
-    height: 74vh;
+    height: 78vh;
     overflow: scroll;
     z-index: 2;
   }
@@ -80,10 +80,10 @@
   #shop-drop-menu{
     display: block;
     position: absolute;
-    top: 4.5vh;
+    top: 6.5vh;
     right: 4vw;
     border-radius: 20px;
-    padding: 1vh 1vw;
+    padding: 1vh 2vw;
     height: 5vh;
     background-color: rgba(255, 255, 255, 0.507);
     z-index: 2;
@@ -91,10 +91,6 @@
   #shop-drop-menu img{
     height: 100%;
     width: 100%;
-  }
-  #shop-drop-menu:hover #shop{
-    display: block;
-    
   }
 }
 

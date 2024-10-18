@@ -1,42 +1,55 @@
 
 #background-container {
   position: relative;
-  height: 60%;
-  width: 100%;
+  height: 100%;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 #background-image {
+  /* top: 0vh;
+  right: 0vw;
+  height: 100%;
+  transform: translate(-10%, 30%); */
   position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 120%;
-  transform: translate(10%, 10%);
+  top: 30vh;
   z-index: 0;
+  height: 100%;
+  width: 100%;
 }
+#background-container img:first-child{
+  height: 80%;
+  width: 400%;
+  object-fit: contain;
+}
+
 @keyframes opponent-animation {
-  0%{transform: translate(50%, -70%)}
-  50%{transform: translate(50%, -68%)}
-  100%{transform: translate(50%, -70%)}
+  0%{transform: translate(0%, 0%)}
+  50%{transform: translate(0%, -5%)}
+  100%{transform: translate(0%, 0%)}
 }
 
 #opponent {
   opacity: 1;
   cursor: pointer;
-  position: relative;
-  top: 50%;
-  bottom: 50%;
-  transform: translate(50%, -70%);
-  height: 60%;
+  position: absolute;
+  top: 28vh;
+  right: 2vw;
   cursor: url("/src/Pictures/sword-cursor-function.png"), auto;
   animation-name: opponent-animation;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   transition: transform 0.1s ease-in-out;
 }
+#background-container img:last-child{
+  height: 40%;
+}
 
 @keyframes opponent-animation-attack {
-  0%{transform: translate(50%, -70%)}
-  50%{transform: translate(40%, -60%)}
-  100%{transform: translate(50%, -70%)}
+  0%{transform: translate(0%, 0%)}
+  50%{transform: translate(-5%, 5%)}
+  100%{transform: translate(0%, 0%)}
 }
 
 #opponent:active{
@@ -72,15 +85,23 @@
   width: 50%;
 }
 
-@media only screen and (max-width: 600px){
-  #background-image {
-    top: 10vh;
-    height: 100%;
+@media only screen and (max-width: 900px){
+  #background-container {
+    z-index: 0;
+  }
+  #background-container img:first-child{
+    height: 80%;
+    width: 500%;
+    object-fit: contain;
   }
   #opponent {
-    top: 55%;
-    transform: translate(-60%, -70%);
-    height: 50%;
+    top: 32vh;
+    right: -18vw;
+    animation-name: opponent-animation;
   }
+  #background-container img:last-child{
+    height: 35%;
+  }
+
   
 }
