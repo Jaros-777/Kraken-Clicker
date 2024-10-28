@@ -5,11 +5,11 @@ import Healt75 from "../Healt/Healt75.png";
 import Healt50 from "../Healt/Healt50.png";
 import Healt25 from "../Healt/Healt25.png";
 import Healt0 from "../Healt/Healt0.png";
-import Turtle from "../Opponents/OpponentsImage/warior-turtle.png";
-import Wolf from "../Opponents/OpponentsImage/warior-wolf.png";
-import Octopus from "../Opponents/OpponentsImage/warior-octopus.png";
+import Turtle from "../Opponents/OpponentsImage/warior-turtle.webp";
+import Wolf from "../Opponents/OpponentsImage/warior-wolf.webp";
+import Octopus from "../Opponents/OpponentsImage/warior-octopus.webp";
 import Clear from "../Opponents/OpponentsImage/clear.png";
-import backGroundOpponent from "../BackGround/new-island.png";
+import backGroundOpponent from "../BackGround/new-island.webp";
 
 function Opponent(props) {
   const wariors = [

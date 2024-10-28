@@ -5,7 +5,7 @@
   width: 100%;
   /* background-color: rgb(37, 150, 190); */
   background: linear-gradient(rgb(189, 228, 243), rgb(37, 150, 190));
-  background-image: url("./Pictures/background-sky.jpg");
+  background-image: url("./Pictures/background-sky.webp");
   color: white;
   display: flex;
   justify-content: space-between;
