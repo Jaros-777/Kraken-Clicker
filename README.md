@@ -1,4 +1,4 @@
-# 🎮 ClickerGame  
+# 🎮 Kraken Clicker 
 ### **[Go to page](https://krakenclicker.netlify.app/)**  
  ### **Is a simple demo clicker. If you hit a opponents, you will earn money.**   
  ### **For money you can buy a few upgrades, more money per click, auto money per 1 sek and more attack damage.**  
